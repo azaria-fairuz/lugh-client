@@ -14,4 +14,4 @@ WORKDIR /app
 COPY --from=builder /app/dist ./dist
 
 EXPOSE 8503
-CMD ["bun", "x", "serve", "dist", "--port", "8503"]
+CMD ["bun", "x", "serve", "dist", "-l", "0.0.0.0:8503"]
